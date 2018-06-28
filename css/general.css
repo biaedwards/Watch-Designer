@@ -106,7 +106,7 @@ article {
 .full-screen {
     height: 100%;
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .crop {
@@ -133,7 +133,7 @@ article {
 .image-container {
     display: block;
     text-align: center;
-    margin: 0% 4% 0% 4%;
+    overflow: auto;
 }
 
 .center-text {
@@ -149,18 +149,19 @@ article {
 }
 
 .sticky{
-    position: -webkit-sticky;
     position: sticky;
+    margin-top: 0;
+    border-top: none;
     top: 0%;
     background-color: white;
-    padding-bottom: 10px;
+    padding-bottom: 2px;
 }
 
 h1.playfair {
     font-size: 800%;
     font-weight: 700;
-    margin-top: 1%;
-    margin-bottom: -1%;
+    border: none;
+    margin: 0;
 }
 
 p.raleway {

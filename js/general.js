@@ -523,19 +523,31 @@ jQuery(document).ready(function ($) {
         index = $images.index($(this));
     });
 
-    $('#close-button').on('click', function(){
+    $('#close-button').on('click', function () {
         $modal.css('display', 'none');
     });
 
-    $('#previous-button').on('click', function(){
-        index = index-1;
-        if(index<0) index = $images.size();
+    $('#previous-button').on('click', function () {
+        index = index - 1;
+        if (index < 0) index = $images.size();
         $modalImg.attr('src', $($images.get(index)).attr('src'));
     });
 
-    $('#next-button').on('click', function(){
-        index = index+1;
-        if(index==$images.size()) index = 0;
+    $('#next-button').on('click', function () {
+        index = index + 1;
+        if (index == $images.size()) index = 0;
         $modalImg.attr('src', $($images.get(index)).attr('src'));
+    });
+
+    var distance = $('#inspiration').offset().top,
+        $window = $(window);
+
+    $window.scroll(function () {
+        if ($window.scrollTop() >= distance) {
+            $('#inspiration').css('overflow', 'auto');
+        }
+        if($('#inspiration').css('overflow')==='auto' && ($window.scrollTop() >= distance*2||$window.scrollTop() < distance) ){
+            $('#inspiration').css('overflow', 'hidden');
+        }
     });
 });
