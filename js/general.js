@@ -513,5 +513,38 @@ jQuery(document).ready(function ($) {
 
 
 
-    
+    //Modal images in inspiration gallery
+    var $modal = $('#myModal');
+    var $modalImg = $('#img01');
+    var $images = $('#inspo-images img');
+    var index = 0;
+
+    $('#inspo-images').on('click', 'img', function () {
+        $modal.css('display', 'block');
+        $modalImg.attr('src', $(this).attr('src'));
+
+        // find index
+        // for(var i=0; i<$images.size(); i++){
+        //     if($images[i].attr('src')===$modalImg.attr('src')){
+        //         $index = i;
+        //         break;
+        //     }
+        // }
+
+        index = $images.index($(this));
+    });
+
+    $('#close-button').on('click', function(){
+        $modal.css('display', 'none');
+    });
+
+    $('#previous-button').on('click', function(){
+        index = index-1;
+        $modalImg.attr('src', $($images.get(index)).attr('src'));
+    });
+
+    $('#next-button').on('click', function(){
+        index = index+1;
+        $modalImg.attr('src', $($images.get(index)).attr('src'));
+    });
 });

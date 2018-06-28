@@ -143,8 +143,8 @@
             <h1 class="playfair">Gallery</h1>
             <p class="raleway">Browse featured designs to gather inspiration about your own personalized timepiece.</p>
         </div>
-        <section class="image-container">
-            <img class="zoom" src="https://data.whicdn.com/images/314759428/superthumb.jpg?t=1530166978" alt="watch-image-1">
+        <section class="image-container" id="inspo-images">
+            <img class="zoom" id="myImg" src="https://data.whicdn.com/images/314759428/superthumb.jpg?t=1530166978" alt="watch-image-1">
             <img class="zoom" src="https://data.whicdn.com/images/314686034/superthumb.jpg?t=1530105633" alt="watch-image-2">
             <img class="zoom" src="https://data.whicdn.com/images/314684620/superthumb.jpg?t=1530102777" alt="watch-image-3">
             <img class="zoom" src="https://data.whicdn.com/images/314623236/superthumb.jpg?t=1529977769" alt="watch-image-4">
@@ -163,6 +163,16 @@
             <img class="zoom" src="https://data.whicdn.com/images/314647518/superthumb.jpg?t=1530020149" alt="watch-image-17">
             <img class="zoom" src="https://data.whicdn.com/images/314643416/superthumb.jpg?t=1530011304" alt="watch-image-18">
         </section>
+
+        <div id="myModal" class="modal">
+            <!-- The Close Button -->
+            <span class="close" id="close-button">&times;</span>
+            <span class="next" id="next-button">&gt;</span>
+            <span class="previous" id="previous-button">&lt;</span>
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+        </div>
     </article>
     <hr>
     <article id="platform">
