@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/general.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
 </head>
 
 <body style="padding:0px; margin:0px; background-color:#fff;font-family:arial,helvetica,sans-serif,verdana,'Open Sans'">
@@ -138,41 +140,81 @@
     </header>
     <!-- #endregion Jssor Slider End -->
 
-    <article id="inspiration">
-        <div class="center-text">
+    <article id="inspiration" class="full-screen">
+        <div class="center-text sticky">
             <h1 class="playfair">Gallery</h1>
             <p class="raleway">Browse featured designs to gather inspiration about your own personalized timepiece.</p>
         </div>
-        <section class="image-container" id="inspo-images">
-            <img class="zoom" id="myImg" src="https://data.whicdn.com/images/314759428/superthumb.jpg?t=1530166978" alt="watch-image-1">
-            <img class="zoom" src="https://data.whicdn.com/images/314686034/superthumb.jpg?t=1530105633" alt="watch-image-2">
-            <img class="zoom" src="https://data.whicdn.com/images/314684620/superthumb.jpg?t=1530102777" alt="watch-image-3">
-            <img class="zoom" src="https://data.whicdn.com/images/314623236/superthumb.jpg?t=1529977769" alt="watch-image-4">
-            <img class="zoom" src="https://data.whicdn.com/images/314753064/superthumb.jpg?t=1530165244" alt="watch-image-5">
-            <img class="zoom" src="https://data.whicdn.com/images/314713109/superthumb.jpg?t=1530093690" alt="watch-image-6">
-            <img class="zoom" src="https://data.whicdn.com/images/314697110/superthumb.jpg?t=1530062246" alt="watch-image-7">
-            <img class="zoom" src="https://data.whicdn.com/images/314693467/superthumb.jpg?t=1530056562" alt="watch-image-8">
-            <img class="zoom" src="https://data.whicdn.com/images/314677971/superthumb.jpg?t=1530092614" alt="watch-image-9">
-            <img class="zoom" src="https://data.whicdn.com/images/314677593/superthumb.jpg?t=1530092194" alt="watch-image-10">
-            <img class="zoom" src="https://data.whicdn.com/images/314478695/superthumb.jpg?t=1529749418" alt="watch-image-11">
-            <img class="zoom" src="https://data.whicdn.com/images/314671543/superthumb.jpg?t=1530083965" alt="watch-image-12">
-            <img class="zoom" src="https://data.whicdn.com/images/314659358/superthumb.jpg?t=1530060437" alt="watch-image-13">
-            <img class="zoom" src="https://data.whicdn.com/images/314652364/superthumb.jpg?t=1530037897" alt="watch-image-14">
-            <img class="zoom" src="https://data.whicdn.com/images/314651108/superthumb.jpg?t=1530033401" alt="watch-image-15">
-            <img class="zoom" src="https://data.whicdn.com/images/314640966/superthumb.jpg?t=1530006547" alt="watch-image-16">
-            <img class="zoom" src="https://data.whicdn.com/images/314647518/superthumb.jpg?t=1530020149" alt="watch-image-17">
-            <img class="zoom" src="https://data.whicdn.com/images/314643416/superthumb.jpg?t=1530011304" alt="watch-image-18">
-        </section>
+        <ul class="image-container" id="inspo-images">
+            <li class="crop">
+                <img class="zoom" src="https://data.whicdn.com/images/314759428/large.jpg" alt="watch-image-1">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/51/96/5a/51965abcf977b7f4a81fe1b65f3656ec.jpg" alt="watch-image-2">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/a9/04/0b/a9040b8dbf2450ea6d161e8eb12d7b25.jpg" alt="watch-image-3">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/ff/d9/f8/ffd9f8929087c360cccd84c6e6d6ec4c.jpg" alt="watch-image-4">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/55/9e/68/559e684779ba13b127eefa9e7573b330.jpg" alt="watch-image-5">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/e0/87/92/e08792358d1166d44c27ae87827bcb14.jpg" alt="watch-image-6">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/2b/10/00/2b1000b97b4af1ccd91955ce0bfbbf36.jpg" alt="watch-image-7">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/f3/6c/27/f36c273487e4b610c12be1549aec14df.jpg" alt="watch-image-8">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/da/d5/d9/dad5d90307297033f527fcb04dfff62b.jpg" alt="watch-image-9">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/03/93/60/039360fd3940fd180067c715c62aa864.jpg" alt="watch-image-10">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/13/0c/aa/130caa865307173d1fc5e873fa70ad9c.jpg" alt="watch-image-11">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/52/49/46/524946d9b1dbcfa6faf8168b17f422c6.jpg" alt="watch-image-12">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/da/d5/d9/dad5d90307297033f527fcb04dfff62b.jpg" alt="watch-image-13">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/8d/5f/b8/8d5fb87bd2f8e879c7e5f464cea89172.jpg" alt="watch-image-14">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/27/14/dc/2714dcb366928fa8571e3e4b89fa4ea7.jpg" alt="watch-image-15">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/64/69/ec/6469ec024276dff7ffd2a495f7b817f6.jpg" alt="watch-image-16">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/e3/e8/06/e3e806a60e025a542200e7d19cb49b70.jpg" alt="watch-image-17">
+            </li>
+            <li class="crop">
+                <img class="zoom" src="https://i.pinimg.com/564x/c7/bd/fc/c7bdfcb17cdd8408072c9b56888d7537.jpg" alt="watch-image-18">
+            </li>
+            <ul>
 
-        <div id="myModal" class="modal">
-            <!-- The Close Button -->
-            <span class="close" id="close-button">&times;</span>
-            <span class="next" id="next-button">&gt;</span>
-            <span class="previous" id="previous-button">&lt;</span>
+                <div id="myModal" class="modal">
+                    <!-- The Close Button -->
+                    <span class="close" id="close-button">&times;</span>
+                    <span class="next" id="next-button">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+                    <span class="previous" id="previous-button">
+                        <i class="fas fa-angle-left"></i>
+                    </span>
 
-            <!-- Modal Content (The Image) -->
-            <img class="modal-content" id="img01">
-        </div>
+                    <!-- Modal Content (The Image) -->
+                    <img class="modal-content" id="img01">
+                </div>
     </article>
     <hr>
     <article id="platform">

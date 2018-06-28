@@ -511,8 +511,6 @@ jQuery(document).ready(function ($) {
     $(window).bind("orientationchange", ScaleSlider);
     /*#endregion responsive code end*/
 
-
-
     //Modal images in inspiration gallery
     var $modal = $('#myModal');
     var $modalImg = $('#img01');
@@ -522,15 +520,6 @@ jQuery(document).ready(function ($) {
     $('#inspo-images').on('click', 'img', function () {
         $modal.css('display', 'block');
         $modalImg.attr('src', $(this).attr('src'));
-
-        // find index
-        // for(var i=0; i<$images.size(); i++){
-        //     if($images[i].attr('src')===$modalImg.attr('src')){
-        //         $index = i;
-        //         break;
-        //     }
-        // }
-
         index = $images.index($(this));
     });
 
@@ -540,11 +529,13 @@ jQuery(document).ready(function ($) {
 
     $('#previous-button').on('click', function(){
         index = index-1;
+        if(index<0) index = $images.size();
         $modalImg.attr('src', $($images.get(index)).attr('src'));
     });
 
     $('#next-button').on('click', function(){
         index = index+1;
+        if(index==$images.size()) index = 0;
         $modalImg.attr('src', $($images.get(index)).attr('src'));
     });
 });
