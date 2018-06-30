@@ -551,25 +551,30 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    var $selectedMenu = $('.selected');
+
     $('#customizer-menu .selectable').on('click', function () {
-        var $selectedMenu = $('.selected');
-        if($selectedMenu){
+
+        if ($selectedMenu) {
             $selectedMenu.addClass('selectable');
             $selectedMenu.removeClass('selected');
         }
         $selectedMenu = $(this);
+        $selectedMenu.removeClass('selectable');
         $selectedMenu.addClass('selected');
-
-        $selectedMenu.attr('class', 'selected');
+        var $shownMenu = $('.show');
+        $shownMenu.removeClass('show');
+        $shownMenu.addClass('hide');
         if ($selectedMenu.attr('id') === 'case') {
-
+            $shownMenu = $('#case-options');
         } else if ($selectedMenu.attr('id') === 'strap') {
-
+            $shownMenu = $('#strap-options');
         } else if ($selectedMenu.attr('id') === 'face') {
-
+            $shownMenu = $('#face-options');
         } else if ($selectedMenu.attr('id') === 'hands') {
-
+            $shownMenu = $('#case-options');
         }
-
+        $shownMenu.removeClass('hide');
+        $shownMenu.addClass('show');
     })
 });

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create YourWatch™</title>
     <link rel="stylesheet" href="css/general.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
@@ -222,12 +222,12 @@
             <p class="raleway">Mix and match different items to create the watch of your dreams.</p>
         </div>
 
-        <div id="creator" class="creator middle">
+        <div id="creator" class="creator">
             <div id="visualizator" class="half-screen">
                 Hello
             </div>
-            <div id="customizer" class="half-screen accordion">
-                <div id="customizer-menu">
+            <div id="customizer" class="half-screen box">
+                <div id="customizer-menu" class="top">
                     <div id="case" class="selectable">
                         <h2 class="playfair">Case</h3>
                     </div>
@@ -243,8 +243,12 @@
                 </div>
 
 
-                <div id="customizer-current">
-                    <div id="case-options" class="raleway options">
+                <div id="customizer-current" class="middle">
+                    <div id="customizer-info" class="show">
+                        <h3 class="raleway">Choose a watch part to work on.</h3>
+                    </div>
+                    
+                    <div id="case-options" class="raleway options hide">
                         <div id="black-case-matte" class="selectable">
                             <img src="img/customizer/case/matte-black.jpg" alt="black-case-matte">
                             <p class="alt-text">Matte Black</p>
@@ -263,7 +267,7 @@
                         </div>
                     </div>
 
-                    <div id="strap-options" class="raleway options">
+                    <div id="strap-options" class="raleway options hide">
                         <div id="black-leather-strap" class="selectable">
                             <img src="img/customizer/strap/black-leather.jpg" alt="black-leather-strap">
                             <p class="alt-text">Black Leather</p>
