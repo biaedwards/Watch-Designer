@@ -296,7 +296,8 @@ background-color: #ffaa00;
 }
 
 .selected{
-    background-color: #bdc3c7;
+    background-color: #000000;
+    color: #fff;
 }
 
 #customizer-current .selectable{
@@ -344,8 +345,8 @@ background-color: #ffaa00;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     line-height: 200px;
-    background:  rgba(0, 0, 0, 0.2);
-    color: #000;
+    background:  rgba(0, 0, 0, 0.616);
+    color: #fff;
     visibility: hidden;
     opacity: 0;
     transition: opacity .2s, visibility .2s;
@@ -372,3 +373,6 @@ background-color: #ffaa00;
     text-align: center;
 }
 
+#customizer-current *{
+    display: none;
+}

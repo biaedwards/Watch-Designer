@@ -550,4 +550,26 @@ jQuery(document).ready(function ($) {
             $('#inspiration').css('overflow', 'hidden');
         }
     });
+
+    $('#customizer-menu .selectable').on('click', function () {
+        var $selectedMenu = $('.selected');
+        if($selectedMenu){
+            $selectedMenu.addClass('selectable');
+            $selectedMenu.removeClass('selected');
+        }
+        $selectedMenu = $(this);
+        $selectedMenu.addClass('selected');
+
+        $selectedMenu.attr('class', 'selected');
+        if ($selectedMenu.attr('id') === 'case') {
+
+        } else if ($selectedMenu.attr('id') === 'strap') {
+
+        } else if ($selectedMenu.attr('id') === 'face') {
+
+        } else if ($selectedMenu.attr('id') === 'hands') {
+
+        }
+
+    })
 });
