@@ -551,9 +551,4 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    $(function () {
-        $("#customizer").accordion({
-            collapsible: true
-        });
-    });
 });

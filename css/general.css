@@ -143,6 +143,7 @@ article {
 
 .raleway {
     font-family: 'Raleway', sans-serif;
+    font-weight: 200;
 }
 
 .playfair {
@@ -295,7 +296,16 @@ background-color: #ffaa00;
     width: 200px;
 }
 
-.option{
+#customizer-menu .selectable:hover{
+    cursor: pointer;
+    background-color: #ecf0f1;
+}
+
+.selected{
+    background-color: #bdc3c7;
+}
+
+#customizer-current .selectable{
     display: inline-block;
     text-align: center;
     border: 1px solid #bdc3c7;
@@ -303,8 +313,68 @@ background-color: #ffaa00;
     margin-right: none;
 }
 
-.option:hover{
-    cursor: pointer;
-    background-color: #ecf0f1;
+#customizer-menu{
+    height: 70px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 10px;
 }
+
+#customizer-menu div{
+    display: inline-block;
+    padding: 0px 30px;
+    border: 1px solid #bdc3c7;
+    border-radius: 15px;
+    margin: auto 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#customizer-menu h2{
+    line-height: 10px;
+}
+
+#customizer span{
+    margin: 10px 0px;
+}
+
+.options .selectable{
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+
+.options .selectable *{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.alt-text{
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    line-height: 200px;
+    background:  rgba(0, 0, 0, 0.2);
+    color: #000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+
+.options .selectable:hover{
+    cursor: pointer;
+    position: relative;
+    height: 200px;
+    widows: 200px;
+}
+
+.options .selectable:hover .alt-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
 
