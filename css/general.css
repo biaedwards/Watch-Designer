@@ -278,13 +278,7 @@ p.raleway {
 }
 
 .creator{
-    position: relative;
-    margin: 1% 2%;
     text-align: center;
-}
-
-.accordion div{
-    margin: 0 5%;
 }
 
 .radio-container input:checked{
@@ -308,16 +302,11 @@ background-color: #ffaa00;
 #customizer-current .selectable{
     display: inline-block;
     text-align: center;
-    border: 1px solid #bdc3c7;
-    margin-left: none;
-    margin-right: none;
 }
 
 #customizer-menu{
-    height: 70px;
-    margin-right: 0;
-    margin-left: 0;
-    margin-top: 10px;
+    margin: 15px 0;
+    height: auto;
 }
 
 #customizer-menu div{
@@ -325,7 +314,7 @@ background-color: #ffaa00;
     padding: 0px 30px;
     border: 1px solid #bdc3c7;
     border-radius: 15px;
-    margin: auto 10px;
+    margin: 5px 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -374,7 +363,12 @@ background-color: #ffaa00;
     opacity: 1;
 }
 
+.options{
+    margin: 20px;
+    overflow-y: auto;
+}
 
-
-
+#customizer-current{
+    text-align: center;
+}
 

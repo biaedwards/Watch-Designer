@@ -550,5 +550,4 @@ jQuery(document).ready(function ($) {
             $('#inspiration').css('overflow', 'hidden');
         }
     });
-
 });
