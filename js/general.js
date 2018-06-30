@@ -546,8 +546,14 @@ jQuery(document).ready(function ($) {
         if ($window.scrollTop() >= distance) {
             $('#inspiration').css('overflow', 'auto');
         }
-        if($('#inspiration').css('overflow')==='auto' && ($window.scrollTop() >= distance*2||$window.scrollTop() < distance) ){
+        if ($('#inspiration').css('overflow') === 'auto' && ($window.scrollTop() >= distance * 2 || $window.scrollTop() < distance)) {
             $('#inspiration').css('overflow', 'hidden');
         }
+    });
+
+    $(function () {
+        $("#customizer").accordion({
+            collapsible: true
+        });
     });
 });
