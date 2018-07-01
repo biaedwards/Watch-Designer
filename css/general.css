@@ -68,10 +68,13 @@ body {
     border-right: 1px solid #000;
 }
 
+#stripe a, #stripe a:hover{
+    text-decoration: none !important;
+    color: #000 !important;
+}
+
 nav a{
-    text-decoration: none;
     font-size: 18pt;
-    color: #000;
     padding: 0 10px;
 }
 
@@ -115,26 +118,60 @@ nav a{
     width: 280px;
 }
 
+.panner{
+    font-size: 40pt;
+    margin: 30px;
+}
+
+.active {
+    color:rgba(226, 226, 226, 0.521);
+}
+#panLeft {
+    left:40px;
+}
+#panRight {
+    right:40px;
+}
+
 .crop:hover {
     transform: scale(1.5);
     /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     cursor: pointer;
 }
 
+#inspo-scroller{
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 30px 50px 30px;
+    overflow: hidden;
+    color: #fff;
+}
+
+#scrolling-images{
+    flex-wrap: nowrap;
+}
+
+#scrolling-images span{
+    flex: 0 0 auto;
+}
+
 #gallery{
-    padding: 50px 100px;
-    margin: 50px 0px;
+    flex: 1 1 auto;
     overflow: hidden;
 }
 
-#gallery h1{
-    font-size: 44pt;
+#gallery-text{
+    margin: 0 7%;
+}
+
+#gallery-text h1{
+    font-size: 60pt;
+    text-shadow: 1px 1px 4px rgba(150, 150, 150, 1);
 }
 
 .image-container {
     flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .center-text {
@@ -160,14 +197,7 @@ p.raleway {
     margin: 1% 0;
 }
 
-#gallery-text{
-    margin-left: 20px;
-}
 
-#gallery{
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
-}
 
 .modal {
     display: none;
@@ -200,7 +230,7 @@ p.raleway {
     }
 }
 
-.close {
+.close-button {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -230,8 +260,8 @@ p.raleway {
     transition: 0.3s;
 }
 
-.close:hover,
-.close:focus,
+.close-button:hover,
+.close-button:focus,
 .next:hover,
 .next:focus,
 .previous:hover,
