@@ -105,10 +105,9 @@ nav a{
     border-radius: 20px;
     flex: 0 0 auto;
     display: grid;
-    margin: 10px;
+    margin: 0 10px;
     width: 280px;
     height: 280px;
-    transition: transform .2s;
     overflow: hidden;
 }
 
@@ -116,6 +115,7 @@ nav a{
     align-self: center;
     min-height: 280px;
     width: 280px;
+    transition: transform .2s;
 }
 
 .panner{
@@ -133,7 +133,7 @@ nav a{
     right:40px;
 }
 
-.crop:hover {
+.zoom:hover {
     transform: scale(1.5);
     /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     cursor: pointer;
@@ -172,6 +172,7 @@ nav a{
 .image-container {
     flex-wrap: nowrap !important;
     overflow: hidden;
+    border-radius: 50px;
 }
 
 .center-text {
@@ -221,14 +222,14 @@ p.raleway {
     transform: translate(-50%, -50%);
 }
 
-@keyframes zoom {
+/* @keyframes zoom {
     from {
         transform: scale(0)
     }
     to {
         transform: scale(1)
     }
-}
+} */
 
 .close-button {
     position: absolute;
