@@ -4,6 +4,7 @@ jQuery(document).ready(function ($) {
     var $modal = $('#myModal');
     var $modalImg = $('#img01');
     var $images = $('#inspo-images img');
+    var size = $images.length;
     var index = 0;
 
     $('#inspo-images').on('click', 'img', function () {
@@ -18,26 +19,14 @@ jQuery(document).ready(function ($) {
 
     $('#previous-button').on('click', function () {
         index = index - 1;
-        if (index < 0) index = $images.size();
+        if (index < 0) index = size;
         $modalImg.attr('src', $($images.get(index)).attr('src'));
     });
 
     $('#next-button').on('click', function () {
         index = index + 1;
-        if (index == $images.size()) index = 0;
+        if (index == size) index = 0;
         $modalImg.attr('src', $($images.get(index)).attr('src'));
-    });
-
-    var distance = $('#inspiration').offset().top,
-        $window = $(window);
-
-    $window.scroll(function () {
-        if ($window.scrollTop() >= distance) {
-            $('#inspiration').css('overflow', 'auto');
-        }
-        if ($('#inspiration').css('overflow') === 'auto' && ($window.scrollTop() >= distance * 2 || $window.scrollTop() < distance)) {
-            $('#inspiration').css('overflow', 'hidden');
-        }
     });
 
     var $selectedMenu = $('#cistomizer-menu .selected');
