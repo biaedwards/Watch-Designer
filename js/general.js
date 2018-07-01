@@ -551,7 +551,12 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    var $selectedMenu = $('.selected');
+    var $selectedMenu = $('#cistomizer-menu .selected');
+    var $selectedCase = $('#case-options .selected');
+    var $selectedStrap = $('#strap-options .selected');
+    var $selectedFace = $('#face-options .selected');
+    var $selectedHands = $('#hands-options .selected');
+
 
     $('#customizer-menu .selectable').on('click', function () {
 
@@ -569,10 +574,16 @@ jQuery(document).ready(function ($) {
             $shownMenu = $('#case-options');
         } else if ($selectedMenu.attr('id') === 'strap') {
             $shownMenu = $('#strap-options');
-        } else if ($selectedMenu.attr('id') === 'face') {
-            $shownMenu = $('#face-options');
-        } else if ($selectedMenu.attr('id') === 'hands') {
-            $shownMenu = $('#case-options');
+        } else if ($selectedMenu.attr('id') === 'numbers') {
+            $shownMenu = $('#numbers-options');
+        } else if ($selectedMenu.attr('id') === 'outer') {
+            $shownMenu = $('#outer-options');
+        }else if ($selectedMenu.attr('id') === 'hands') {
+            $shownMenu = $('#hands-options');
+        }else if ($selectedMenu.attr('id') === 'text') {
+            $shownMenu = $('#text-options');
+        }else if ($selectedMenu.attr('id') === 'image') {
+            $shownMenu = $('#image-options');
         }
         $shownMenu.removeClass('hide');
         $shownMenu.addClass('show');
