@@ -1,6 +1,4 @@
 jQuery(document).ready(function ($) {
-
-    //Modal images in inspiration gallery
     var $modal = $('#myModal');
     var $modalImg = $('#img01');
     var $images = $('#inspo-images img');
@@ -43,11 +41,9 @@ jQuery(document).ready(function ($) {
             $selectedMenu.removeClass('selected');
         }
         $selectedMenu = $(this);
-        $selectedMenu.removeClass('selectable');
-        $selectedMenu.addClass('selected');
+        $selectedMenu.removeClass('selectable').addClass('selected');
         var $shownMenu = $('.show');
-        $shownMenu.removeClass('show');
-        $shownMenu.addClass('hide');
+        $shownMenu.removeClass('show').addClass('hide');
         if ($selectedMenu.attr('id') === 'case') {
             $shownMenu = $('#case-options');
         } else if ($selectedMenu.attr('id') === 'strap') {
@@ -56,44 +52,44 @@ jQuery(document).ready(function ($) {
             $shownMenu = $('#numbers-options');
         } else if ($selectedMenu.attr('id') === 'outer') {
             $shownMenu = $('#outer-options');
-        }else if ($selectedMenu.attr('id') === 'hands') {
+        } else if ($selectedMenu.attr('id') === 'hands') {
             $shownMenu = $('#hands-options');
-        }else if ($selectedMenu.attr('id') === 'text') {
+        } else if ($selectedMenu.attr('id') === 'text') {
             $shownMenu = $('#text-options');
-        }else if ($selectedMenu.attr('id') === 'image') {
+        } else if ($selectedMenu.attr('id') === 'image') {
             $shownMenu = $('#image-options');
         }
-        $shownMenu.removeClass('hide');
-        $shownMenu.addClass('show');
+        $shownMenu.removeClass('hide').addClass('show');
     });
 
-    (function(){
+    $(function () {
         var scrollHandle = 0;
         var scrollStep = 5;
         var $parent = $('#inspo-images');
 
-        $('.panner').on('mouseenter', function(){
-            var data = $(this).data('scrollModifier'), direction = parseInt(data, 10);
+        $('.panner').on('mouseenter', function () {
+            var data = $(this).data('scrollModifier'),
+                direction = parseInt(data, 10);
             $(this).addClass('active');
 
             startScrolling(direction, scrollStep);
         });
 
-        $('.panner').on('mouseleave', function(){
+        $('.panner').on('mouseleave', function () {
             stopScrolling();
             $(this).removeClass('active');
         });
 
-        function startScrolling(modifier, step){
-            if(scrollHandle === 0){
-                scrollHandle = setInterval(function(){
-                    var newOffset = $parent.scrollLeft() + (scrollStep*modifier);
+        function startScrolling(modifier, step) {
+            if (scrollHandle === 0) {
+                scrollHandle = setInterval(function () {
+                    var newOffset = $parent.scrollLeft() + (scrollStep * modifier);
                     $parent.scrollLeft(newOffset);
-                },10);
+                }, 10);
             }
         }
 
-        function stopScrolling(){
+        function stopScrolling() {
             clearInterval(scrollHandle);
             scrollHandle = 0;
         }

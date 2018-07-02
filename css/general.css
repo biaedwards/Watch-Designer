@@ -26,9 +26,18 @@ body {
     }
 } */
 
-.full-screen{
-    height: 100%;
-    overflow: hidden;
+
+
+@media (min-width: 1255px){
+    .full-screen{
+        width:100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .rest-of-page{
+        flex:1 1 0;
+    }
 }
 
 #stripe{
@@ -78,10 +87,6 @@ nav a{
     padding: 0 10px;
 }
 
-.rest-of-page{
-    flex:1 1 0;
-}
-
 #carousel{
     max-height: 100%;
 }
@@ -101,7 +106,6 @@ nav a{
 }
 
 .crop {
-    border: 1px solid white;
     border-radius: 20px;
     flex: 0 0 auto;
     display: grid;
@@ -139,10 +143,13 @@ nav a{
     cursor: pointer;
 }
 
-#inspo-scroller{
+.space{
     margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.9);
     padding: 10px 30px 50px 30px;
+}
+
+#inspo-scroller{
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../img/black-bg.jpg');
     overflow: hidden;
     color: #fff;
 }
@@ -160,11 +167,11 @@ nav a{
     overflow: hidden;
 }
 
-#gallery-text{
+.text-box{
     margin: 0 7%;
 }
 
-#gallery-text h1{
+h1.raleway{
     font-size: 60pt;
     text-shadow: 1px 1px 4px rgba(150, 150, 150, 1);
 }
@@ -197,8 +204,6 @@ p.raleway {
     font-size: 150%;
     margin: 1% 0;
 }
-
-
 
 .modal {
     display: none;
@@ -327,6 +332,10 @@ p.raleway {
 
 #customizer span{
     margin: 10px 0px;
+}
+
+.modal span{
+    z-index: 1000;
 }
 
 .options .selectable{
