@@ -26,6 +26,17 @@ body {
     }
 } */
 
+.no-stretch{
+    flex: 0 0 auto;
+}
+
+.auto-flex{
+    flex: 1 1 0;
+}
+
+.no-overflow{
+    overflow: hidden;
+}
 
 
 @media (min-width: 1255px){
@@ -47,12 +58,12 @@ body {
     right: 0;
     background-color: #fff;
     z-index: 1000;
-    flex: 0 0 auto;
 }
 
 .vertical-box{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .horizontal-box{
@@ -107,12 +118,10 @@ nav a{
 
 .crop {
     border-radius: 20px;
-    flex: 0 0 auto;
     display: grid;
     margin: 0 10px;
     width: 280px;
     height: 280px;
-    overflow: hidden;
 }
 
 .zoom {
@@ -139,7 +148,6 @@ nav a{
 
 .zoom:hover {
     transform: scale(1.5);
-    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     cursor: pointer;
 }
 
@@ -150,21 +158,11 @@ nav a{
 
 #inspo-scroller{
     background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../img/black-bg.jpg');
-    overflow: hidden;
     color: #fff;
 }
 
 #scrolling-images{
     flex-wrap: nowrap;
-}
-
-#scrolling-images span{
-    flex: 0 0 auto;
-}
-
-#gallery{
-    flex: 1 1 auto;
-    overflow: hidden;
 }
 
 .text-box{
@@ -178,7 +176,6 @@ h1.raleway{
 
 .image-container {
     flex-wrap: nowrap !important;
-    overflow: hidden;
     border-radius: 50px;
 }
 
@@ -283,13 +280,18 @@ p.raleway {
     }
 }
 
-.creator{
-    text-align: center;
-}
-
-#customizer img{
+#customizer-current img{
     height: 200px;
     width: 200px;
+}
+
+#customizer-current{
+    height: 100%;
+    overflow-y: auto;
+}
+
+#customizer-menu{
+    margin: 0 30px;
 }
 
 #customizer-menu .selectable:hover{
@@ -302,45 +304,19 @@ p.raleway {
     color: #fff;
 }
 
-#customizer-current{
-    margin: 50px 0;
-}
-
-#customizer-current .selectable, #customizer-current .selected{
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-#customizer-menu{
-    margin: 15px 0;
-    height: auto;
-}
-
-#customizer-menu div{
-    display: inline-block;
-    padding: 0px 15px;
-    border: 1px solid #bdc3c7;
-    border-radius: 15px;
-    margin: 5px 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#customizer-menu h2{
-    line-height: 10px;
-}
-
-#customizer span{
-    margin: 10px 0px;
-}
-
 .modal span{
     z-index: 1000;
+}
+
+.options{
+    justify-content: flex-start;
+    text-align: left;
 }
 
 .options .selectable{
     height: 200px;
     width: 200px;
+    display: inline-flex;
     position: relative;
 }
 
@@ -350,7 +326,8 @@ p.raleway {
     left: 0;
     bottom: 0;
     right: 0;
-}
+    text-align: center;
+} 
 
 .alt-text{
     -webkit-margin-before: 0em;
@@ -361,6 +338,14 @@ p.raleway {
     visibility: hidden;
     opacity: 0;
     transition: opacity .2s, visibility .2s;
+}
+
+.options .selected .alt-text{
+    background:  rgba(104, 104, 104, 0.616);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    visibility: visible;
+    opacity: 1;
 }
 
 .options .selectable:hover{
@@ -376,8 +361,8 @@ p.raleway {
 }
 
 .options{
-    margin: 20px;
-    overflow-y: auto;
+    margin: 0;
+    height: 100%;
 }
 
 .hide{
@@ -391,9 +376,40 @@ p.raleway {
     font-weight: 900;
 }
 
-.show{
+/* .show{
     display: block;
+} */
+
+.menu{
+    height: 100%;
 }
 
+.creator{
+    justify-content: space-around;
+    align-content: center;
+}
 
+.all-borders{
+    margin: 0;
+    padding: 20px;
+    border: 1px solid black;
+}
 
+#visualizator{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.vis-img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.vis-img img{
+    height: 100%;
+}

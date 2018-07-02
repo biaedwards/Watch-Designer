@@ -68,8 +68,8 @@ jQuery(document).ready(function ($) {
         var $parent = $('#inspo-images');
 
         $('.panner').on('mouseenter', function () {
-            var data = $(this).data('scrollModifier'),
-                direction = parseInt(data, 10);
+            var data = $(this).data('scrollModifier');
+            var direction = parseInt(data, 10);
             $(this).addClass('active');
 
             startScrolling(direction, scrollStep);
@@ -94,4 +94,23 @@ jQuery(document).ready(function ($) {
             scrollHandle = 0;
         }
     }());
+
+    $('.options .selectable').on('click', function(){
+        $(this).parent().children().removeClass('selected');
+        $(this).addClass('selected');
+        var imgID = $(this).attr('id');
+        var imgPath = 'img/visualizer/'+imgID+'.png';
+        debugger;
+        if(imgID.includes('case')){
+            $('#case-vis img').attr('src', imgPath);
+        } else if(imgID.includes('strap')){
+            $('#strap-vis img').attr('src', imgPath);
+        } else if(imgID.includes('numbers')){
+            $('#numbers-vis img').attr('src', imgPath);
+        } else if(imgID.includes('outer')){
+            $('#outer-vis img').attr('src', imgPath);
+        } else if(imgID.includes('hands')){
+            $('#hands-vis img').attr('src', imgPath);
+        };
+    });
 });
