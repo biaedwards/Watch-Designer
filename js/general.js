@@ -111,7 +111,8 @@ jQuery(document).ready(function ($) {
                 'width': '200px',
                 'height': '200px'
             }).appendTo('#image-vis');
-            $img.draggable({containment: 'parent'});
+            $img.resizable({aspectRatio: 1/1, autoHide:true});
+            $img.parent().draggable();
 
             imageIndex++;
         }
