@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
 <body id="start">
@@ -186,20 +187,23 @@
 
         <div id="creator" class="creator horizontal-box space auto-flex center-text no-overflow">
             <div id="visualizator" class="auto-flex">
-                <div id="case-vis" class="vis-img">
+                <div id="case-vis" class="vis-img most-top">
                     <img src="img/visualizer/black-case-matte.png" alt="chosen-case">
                 </div>
-                <div id="strap-vis" class="vis-img">
+                <div id="strap-vis" class="vis-img most-top">
                     <img src="img/visualizer/black-leather-strap.png" alt="chosen-strap">
                 </div>
-                <div id="numbers-vis" class="vis-img">
+                <div id="numbers-vis" class="vis-img most-top">
                     <img src="img/visualizer/numbers-01.png" alt="chosen-numbers">
                 </div>
-                <div id="outer-vis" class="vis-img">
+                <div id="outer-vis" class="vis-img most-top">
                     <img src="img/visualizer/outer-01.png" alt="chosen-outer">
                 </div>
-                <div id="hands-vis" class="vis-img">
+                <div id="hands-vis" class="vis-img most-top">
                     <img src="img/visualizer/hands-black.png" alt="chosen-hands">
+                </div>
+                <div id="image-vis" class="dnd">
+
                 </div>
             </div>
 
@@ -229,7 +233,7 @@
 
 
             <div id="customizer-current" class="auto-flex">
-                <div id="customizer-info" class="show">
+                <div id="customizer-info" class="myShow">
                     <h3 class="raleway">Choose a watch part to work on.</h3>
                 </div>
 
@@ -407,16 +411,108 @@
                         <p class="alt-text">Mustard</p>
                     </div>
                 </div>
+
+                <div id="image-options" class="raleway hide options">
+                    <div id="pic-01" class="selectable">
+                        <img src="img/customizer/pic/pic-01.jpg" alt="pic-01">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-02" class="selectable">
+                        <img src="img/customizer/pic/pic-02.jpg" alt="pic-02">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-03" class="selectable">
+                        <img src="img/customizer/pic/pic-03.jpg" alt="pic-03">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-04" class="selectable">
+                        <img src="img/customizer/pic/pic-04.jpg" alt="pic-04">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-05" class="selectable">
+                        <img src="img/customizer/pic/pic-05.jpg" alt="pic-05">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-06" class="selectable">
+                        <img src="img/customizer/pic/pic-06.jpg" alt="pic-06">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-07" class="selectable">
+                        <img src="img/customizer/pic/pic-07.jpg" alt="pic-07">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-08" class="selectable">
+                        <img src="img/customizer/pic/pic-08.jpg" alt="pic-08">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-09" class="selectable">
+                        <img src="img/customizer/pic/pic-09.jpg" alt="pic-09">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-10" class="selectable">
+                        <img src="img/customizer/pic/pic-10.jpg" alt="pic-10">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-11" class="selectable">
+                        <img src="img/customizer/pic/pic-11.jpg" alt="pic-11">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-12" class="selectable">
+                        <img src="img/customizer/pic/pic-12.jpg" alt="pic-12">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-13" class="selectable">
+                        <img src="img/customizer/pic/pic-13.jpg" alt="pic-13">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-14" class="selectable">
+                        <img src="img/customizer/pic/pic-14.jpg" alt="pic-14">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-15" class="selectable">
+                        <img src="img/customizer/pic/pic-15.jpg" alt="pic-15">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-16" class="selectable">
+                        <img src="img/customizer/pic/pic-16.jpg" alt="pic-16">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-17" class="selectable">
+                        <img src="img/customizer/pic/pic-17.jpg" alt="pic-17">
+                        <p class="alt-text"></p>
+                    </div>
+                    <div id="pic-18" class="selectable">
+                        <img src="img/customizer/pic/pic-18.jpg" alt="pic-18">
+                        <p class="alt-text"></p>
+                    </div>
+                </div>
             </div>
 
         </div>
-        <div id="save-design" class="center-text no-stretch"> Save.</div>
+        <div id="save-design" class="center-text no-stretch">
+            <a class="raleway shiny-button myShow" id="ready">
+                I am ready!
+            </a>
+            <div id="enter-email" class="hide raleway center-text">
+                Please enter your email for further instructions about how to get your watch in no time flat!
+                <input type="email" name="email" id="email">
+                <a id="submit" class="shiny-button">Submit</a>
+            </div>
+            <div id="submitted" class="hide raleway center-text">
+                Your design has been saved. You should get an email shortly!
+                <a class="raleway shiny-button myShow" id="start-over">
+                    Start over
+                </a>
+            </div>
+        </div>
     </article>
 
 
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/general.js" type="text/javascript"></script>

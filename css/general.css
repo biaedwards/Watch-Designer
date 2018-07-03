@@ -26,32 +26,30 @@ body {
     }
 } */
 
-.no-stretch{
+.no-stretch {
     flex: 0 0 auto;
 }
 
-.auto-flex{
+.auto-flex {
     flex: 1 1 0;
 }
 
-.no-overflow{
+.no-overflow {
     overflow: hidden;
 }
 
-
-@media (min-width: 1255px){
-    .full-screen{
-        width:100%;
+@media (min-width: 1255px) {
+    .full-screen {
+        width: 100%;
         height: 100%;
         overflow: hidden;
     }
-
-    .rest-of-page{
-        flex:1 1 0;
+    .rest-of-page {
+        flex: 1 1 0;
     }
 }
 
-#stripe{
+#stripe {
     position: fixed;
     top: 0;
     left: 0;
@@ -60,13 +58,13 @@ body {
     z-index: 1000;
 }
 
-.vertical-box{
+.vertical-box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.horizontal-box{
+.horizontal-box {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -74,35 +72,39 @@ body {
     padding: 5px 20px;
 }
 
-#logo *{
+#logo * {
     margin: 0 10px;
     line-height: auto;
 }
 
-#logo h1{
+#logo h1 {
     text-shadow: 0px 1px 1px #636e72;
 }
 
-.side-borders{
+.side-borders {
     border-left: 1px solid #000;
     border-right: 1px solid #000;
 }
 
-#stripe a, #stripe a:hover{
+a, a:hover{
     text-decoration: none !important;
+}
+
+#stripe a,
+#stripe a:hover {
     color: #000 !important;
 }
 
-nav a{
+nav a {
     font-size: 18pt;
     padding: 0 10px;
 }
 
-#carousel{
+#carousel {
     max-height: 100%;
 }
 
-.carousel-caption{
+.carousel-caption {
     bottom: 35% !important;
     background-color: rgba(0, 0, 0, 0.7);
     font-family: 'Raleway';
@@ -111,7 +113,7 @@ nav a{
     padding: 5px !important;
 }
 
-.carousel-caption h3{
+.carousel-caption h3 {
     font-size: 20pt;
     font-weight: 400;
 }
@@ -131,19 +133,21 @@ nav a{
     transition: transform .2s;
 }
 
-.panner{
+.panner {
     font-size: 40pt;
     margin: 30px;
 }
 
 .active {
-    color:rgba(226, 226, 226, 0.521);
+    color: rgba(226, 226, 226, 0.521);
 }
+
 #panLeft {
-    left:40px;
+    left: 40px;
 }
+
 #panRight {
-    right:40px;
+    right: 40px;
 }
 
 .zoom:hover {
@@ -151,25 +155,25 @@ nav a{
     cursor: pointer;
 }
 
-.space{
+.space {
     margin-top: 20px;
     padding: 10px 30px 50px 30px;
 }
 
-#inspo-scroller{
-    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../img/black-bg.jpg');
+#inspo-scroller {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../img/black-bg.jpg');
     color: #fff;
 }
 
-#scrolling-images{
+#scrolling-images {
     flex-wrap: nowrap;
 }
 
-.text-box{
+.text-box {
     margin: 0 7%;
 }
 
-h1.raleway{
+h1.raleway {
     font-size: 60pt;
     text-shadow: 1px 1px 4px rgba(150, 150, 150, 1);
 }
@@ -280,129 +284,129 @@ p.raleway {
     }
 }
 
-#customizer-current img{
+#customizer-current img {
     height: 200px;
     width: 200px;
 }
 
-#customizer-current{
+#customizer-current {
     height: 100%;
     overflow-y: auto;
 }
 
-#customizer-menu{
+#customizer-menu {
     margin: 0 30px;
 }
 
-#customizer-menu .selectable:hover{
+#customizer-menu .selectable:hover {
     cursor: pointer;
     background-color: #ecf0f1;
 }
 
-#customizer-menu .selected{
+#customizer-menu .selected {
     background-color: #000000;
     color: #fff;
 }
 
-.modal span{
+.modal span {
     z-index: 1000;
 }
 
-.options{
+.options {
     justify-content: flex-start;
     text-align: left;
 }
 
-.options .selectable{
+.options .selectable {
     height: 200px;
     width: 200px;
     display: inline-flex;
     position: relative;
 }
 
-.options .selectable *{
+.options .selectable * {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     text-align: center;
-} 
+}
 
-.alt-text{
+.alt-text {
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     line-height: 200px;
-    background:  rgba(0, 0, 0, 0.616);
+    background: rgba(0, 0, 0, 0.616);
     color: #fff;
     visibility: hidden;
     opacity: 0;
     transition: opacity .2s, visibility .2s;
 }
 
-.options .selected .alt-text{
-    background:  rgba(104, 104, 104, 0.616);
+.options .selected .alt-text {
+    background: rgba(104, 104, 104, 0.616);
     color: rgb(0, 0, 0);
     font-weight: bold;
     visibility: visible;
     opacity: 1;
 }
 
-.options .selectable:hover{
+.options .selectable:hover {
     cursor: pointer;
     position: relative;
     height: 200px;
     widows: 200px;
 }
 
-.options .selectable:hover .alt-text{
+.options .selectable:hover .alt-text {
     visibility: visible;
     opacity: 1;
 }
 
-.options{
+.options {
     margin: 0;
     height: 100%;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-#customizer-info h3{
+#customizer-info h3 {
     font-weight: 100 !important;
     font-size: 24pt;
     margin: 50px 10px;
     font-weight: 900;
 }
 
-/* .show{
-    display: block;
-} */
+.myShow{
+    display: inline-block;
+}
 
-.menu{
+.menu {
     height: 100%;
 }
 
-.creator{
+.creator {
     justify-content: space-around;
     align-content: center;
 }
 
-.all-borders{
+.all-borders {
     margin: 0;
     padding: 20px;
     border: 1px solid black;
 }
 
-#visualizator{
+#visualizator {
     position: relative;
     height: 100%;
     width: 100%;
     overflow: hidden;
 }
 
-.vis-img{
+.vis-img {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -410,6 +414,56 @@ p.raleway {
     justify-content: center;
 }
 
-.vis-img img{
+.dnd{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* .dnd img{
+    position: absolute;
+    align-self: center;
+} */
+
+.vis-img img {
     height: 100%;
 }
+
+.shiny-button {
+    position: relative;
+    padding: 15px 25px;
+    background-color: #ecf0f1;
+    background-image: linear-gradient(#ecf0f1, #bdc3c7);
+    color: #000;
+    font-weight: 400;
+    margin: 0 20px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px -2px #000;
+    text-shadow: 0px -1px #333;
+}
+
+.shiny-button:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: 50%;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+}
+
+.shiny-button:hover{
+    background: linear-gradient(#34495e, #2c3e50);
+    color: #fff;
+    cursor: pointer;
+}
+
+#save-design *{
+    font-size: 16pt;
+}
+
+/* .most-top{
+    z-index: 10000;
+} */

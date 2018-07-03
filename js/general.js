@@ -27,23 +27,13 @@ jQuery(document).ready(function ($) {
         $modalImg.attr('src', $($images.get(index)).attr('src'));
     });
 
-    var $selectedMenu = $('#cistomizer-menu .selected');
-    var $selectedCase = $('#case-options .selected');
-    var $selectedStrap = $('#strap-options .selected');
-    var $selectedFace = $('#face-options .selected');
-    var $selectedHands = $('#hands-options .selected');
-
-
     $('#customizer-menu .selectable').on('click', function () {
-
-        if ($selectedMenu) {
-            $selectedMenu.addClass('selectable');
-            $selectedMenu.removeClass('selected');
-        }
+        var $selectedMenu = $('.selected');
+        $selectedMenu.addClass('selectable').removeClass('selected');
         $selectedMenu = $(this);
         $selectedMenu.removeClass('selectable').addClass('selected');
-        var $shownMenu = $('.show');
-        $shownMenu.removeClass('show').addClass('hide');
+        var $shownMenu = $('#customizer-current .myShow');
+        $shownMenu.removeClass('myShow').addClass('hide');
         if ($selectedMenu.attr('id') === 'case') {
             $shownMenu = $('#case-options');
         } else if ($selectedMenu.attr('id') === 'strap') {
@@ -59,7 +49,7 @@ jQuery(document).ready(function ($) {
         } else if ($selectedMenu.attr('id') === 'image') {
             $shownMenu = $('#image-options');
         }
-        $shownMenu.removeClass('hide').addClass('show');
+        $shownMenu.removeClass('hide').addClass('myShow');
     });
 
     $(function () {
@@ -95,22 +85,55 @@ jQuery(document).ready(function ($) {
         }
     }());
 
-    $('.options .selectable').on('click', function(){
-        $(this).parent().children().removeClass('selected');
-        $(this).addClass('selected');
-        var imgID = $(this).attr('id');
-        var imgPath = 'img/visualizer/'+imgID+'.png';
-        debugger;
-        if(imgID.includes('case')){
+    var imageIndex = 1;
+
+    $('.options .selectable').on('click', function () {
+        $clicked = $(this);
+        $clicked.parent().children().removeClass('selected');
+        $clicked.addClass('selected');
+        var imgID = $clicked.attr('id');
+        var imgPath = 'img/visualizer/' + imgID + '.png';
+        if (imgID.includes('case')) {
             $('#case-vis img').attr('src', imgPath);
-        } else if(imgID.includes('strap')){
+        } else if (imgID.includes('strap')) {
             $('#strap-vis img').attr('src', imgPath);
-        } else if(imgID.includes('numbers')){
+        } else if (imgID.includes('numbers')) {
             $('#numbers-vis img').attr('src', imgPath);
-        } else if(imgID.includes('outer')){
+        } else if (imgID.includes('outer')) {
             $('#outer-vis img').attr('src', imgPath);
-        } else if(imgID.includes('hands')){
+        } else if (imgID.includes('hands')) {
             $('#hands-vis img').attr('src', imgPath);
-        };
+        } else if (imgID.includes('pic')){
+            var $img = $('<img/>').attr({
+                'id': 'myImage'+imageIndex,
+                'src': imgPath,
+                'alt':'myImage'+imageIndex,
+                'width': '200px',
+                'height': '200px'
+            }).appendTo('#image-vis');
+            $img.draggable({containment: 'parent'});
+
+            imageIndex++;
+        }
+    });
+
+    $('#ready').on('click', function () {
+        $('#ready').removeClass('myShow').addClass('hide');
+        $('#enter-email').removeClass('hide').addClass('myShow');
+
+    });
+
+    $('#submit').on('click', function () {
+        if ($('#email').val().includes('@')) {
+            $('#enter-email').removeClass('myShow').addClass('hide');
+            $('#submitted').removeClass('hide').addClass('myShow');
+        } else {
+            alert('Please enter valid email!');
+        }
+    });
+
+    $('#start-over').on('click', function () {
+        $('#submitted').removeClass('myShow').addClass('hide');
+        $('#ready').removeClass('hide').addClass('myShow');
     });
 });
