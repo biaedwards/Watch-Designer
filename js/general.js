@@ -103,19 +103,28 @@ jQuery(document).ready(function ($) {
             $('#outer-vis img').attr('src', imgPath);
         } else if (imgID.includes('hands')) {
             $('#hands-vis img').attr('src', imgPath);
-        } else if (imgID.includes('pic')){
+        } else if (imgID.includes('pic')) {
+            $clicked.parent().siblings().find('p').html('');
+            $clicked.find('p').html('Double click to remove.');
             var $img = $('<img/>').attr({
-                'id': 'myImage'+imageIndex,
+                'id': 'myImage' + imageIndex,
                 'src': imgPath,
-                'alt':'myImage'+imageIndex,
+                'alt': 'myImage' + imageIndex,
                 'width': '200px',
                 'height': '200px'
             }).appendTo('#image-vis');
-            $img.resizable({aspectRatio: 1/1, autoHide:true});
+            $img.resizable({
+                aspectRatio: 1 / 1,
+                autoHide: true
+            });
             $img.parent().draggable();
 
             imageIndex++;
         }
+    });
+
+    $('#image-vis').on('dblclick', 'img', function () {
+        $(this).remove();
     });
 
     $('#ready').on('click', function () {
@@ -137,4 +146,15 @@ jQuery(document).ready(function ($) {
         $('#submitted').removeClass('myShow').addClass('hide');
         $('#ready').removeClass('hide').addClass('myShow');
     });
+
+    $('#fonts a').on('click', function () {
+        $textBox = $('#see-text h2');
+        var font = $(this).html().toLowerCase();
+        $textBox.attr('class', font);
+        var textToAdd = $('#text-to-add').val();
+        // debugger;
+        $('#see-text h2').html(textToAdd);
+    });
+
+    
 });

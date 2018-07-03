@@ -437,11 +437,14 @@ p.raleway {
     background-color: #ecf0f1;
     background-image: linear-gradient(#ecf0f1, #bdc3c7);
     color: #000;
-    font-weight: 400;
     margin: 0 20px;
     border-radius: 10px;
     box-shadow: 0px 1px 4px -2px #000;
     text-shadow: 0px -1px #333;
+}
+
+#text-options .shiny-button{
+    margin: 10px;
 }
 
 .shiny-button:after {
@@ -464,6 +467,31 @@ p.raleway {
     font-size: 16pt;
 }
 
-/* .most-top{
-    z-index: 10000;
-} */
+.cookie{
+    font-family: 'Cookie', cursive;
+}
+
+.sancreek{
+    font-family: 'Sancreek', cursive;
+}
+
+.cinzel{
+    font-family: 'Cinzel', serif;
+}
+
+.font-container *{
+    font-size: 14pt;
+}
+
+#see-text *{
+    font-size: 28pt;
+}
+
+#text-options{
+    height: 100%;
+    align-content: center;
+}
+
+#add-text-button{
+    margin: 20px;
+}
