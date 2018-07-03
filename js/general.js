@@ -112,7 +112,7 @@ jQuery(document).ready(function ($) {
                 'alt': 'myImage' + imageIndex,
                 'width': '200px',
                 'height': '200px'
-            }).appendTo('#image-vis');
+            }).appendTo('#image-text-vis');
             $img.resizable({
                 aspectRatio: 1 / 1,
                 autoHide: true
@@ -123,7 +123,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    $('#image-vis').on('dblclick', 'img', function () {
+    $('#image-text-vis').on('dblclick', 'img, h2', function () {
         $(this).remove();
     });
 
@@ -148,13 +148,22 @@ jQuery(document).ready(function ($) {
     });
 
     $('#fonts a').on('click', function () {
-        $textBox = $('#see-text h2');
+        var $textBox = $('#see-text h2');
         var font = $(this).html().toLowerCase();
         $textBox.attr('class', font);
         var textToAdd = $('#text-to-add').val();
-        // debugger;
         $('#see-text h2').html(textToAdd);
     });
 
-    
+    $('#add-text').on('click', function(){
+        var $text = $('#see-text h2').clone();
+        $text.appendTo('#image-text-vis');
+        $text.draggable();
+    });
+
+    $('#font-size-button').on('click', function(){
+        var $textBox = $('#see-text h2');
+        var fontSize = $('#font-size').val()+'pt';
+        $textBox.css('font-size', fontSize);
+    })
 });

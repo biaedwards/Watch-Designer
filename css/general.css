@@ -479,12 +479,9 @@ p.raleway {
     font-family: 'Cinzel', serif;
 }
 
-.font-container *{
+.button-container *{
     font-size: 14pt;
-}
-
-#see-text *{
-    font-size: 28pt;
+    height: auto;
 }
 
 #text-options{
@@ -494,4 +491,17 @@ p.raleway {
 
 #add-text-button{
     margin: 20px;
+}
+
+.dnd:hover{
+    cursor: pointer;
+}
+
+#font-size i{
+    font-size: 24pt;
+    margin: 0 10px;
+}
+
+#text-options>*{
+    margin: 15px 0;
 }
