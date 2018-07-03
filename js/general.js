@@ -28,7 +28,7 @@ jQuery(document).ready(function ($) {
     });
 
     $('#customizer-menu .selectable').on('click', function () {
-        var $selectedMenu = $('.selected');
+        var $selectedMenu = $('#customizer-menu .selected');
         $selectedMenu.addClass('selectable').removeClass('selected');
         $selectedMenu = $(this);
         $selectedMenu.removeClass('selectable').addClass('selected');

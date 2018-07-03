@@ -295,7 +295,7 @@ p.raleway {
 }
 
 #customizer-menu {
-    margin: 0 30px;
+    margin: 0 30px;    
 }
 
 #customizer-menu .selectable:hover {
@@ -396,7 +396,8 @@ p.raleway {
 .all-borders {
     margin: 0;
     padding: 20px;
-    border: 1px solid black;
+    border: 2px solid black;
+    box-shadow: 0px 1px 4px -2px #000;
 }
 
 #visualizator {
@@ -481,12 +482,7 @@ p.raleway {
 
 .button-container *{
     font-size: 14pt;
-    height: auto;
-}
-
-#text-options{
-    height: 100%;
-    align-content: center;
+    margin: auto 5px;
 }
 
 #add-text-button{
@@ -502,6 +498,11 @@ p.raleway {
     margin: 0 10px;
 }
 
-#text-options>*{
-    margin: 15px 0;
+#text-options p{
+    font-size: 16pt;
 }
+
+#platform h1{
+    margin: 0 30;
+}
+
