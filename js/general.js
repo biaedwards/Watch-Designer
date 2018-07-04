@@ -48,6 +48,8 @@ jQuery(document).ready(function ($) {
             $shownMenu = $('#text-options');
         } else if ($selectedMenu.attr('id') === 'image') {
             $shownMenu = $('#image-options');
+        } else if ($selectedMenu.attr('id') === 'photos') {
+            $shownMenu = $('#photo-options');
         }
         $shownMenu.removeClass('hide').addClass('myShow');
     });
@@ -118,7 +120,6 @@ jQuery(document).ready(function ($) {
                 autoHide: true
             });
             $img.parent().draggable();
-
             imageIndex++;
         }
     });
@@ -155,15 +156,31 @@ jQuery(document).ready(function ($) {
         $('#see-text h2').html(textToAdd);
     });
 
-    $('#add-text').on('click', function(){
+    $('#font-size-button').on('click', function () {
+        var $textBox = $('#see-text h2');
+        var fontSize = $('#font-size').val() + 'pt';
+        $textBox.css('font-size', fontSize);
+    });
+
+    $('#add-text').on('click', function () {
         var $text = $('#see-text h2').clone();
         $text.appendTo('#image-text-vis');
         $text.draggable();
     });
 
-    $('#font-size-button').on('click', function(){
-        var $textBox = $('#see-text h2');
-        var fontSize = $('#font-size').val()+'pt';
-        $textBox.css('font-size', fontSize);
-    })
+    $('#add-photo').on('click', function () {
+        var imgSrc = $('#photo-url').val();
+        var $img = $('<img/>').attr({
+            'id': 'myImage' + imageIndex,
+            'src': imgSrc,
+            'alt': 'myImage' + imageIndex,
+            'max-width': 'parent',
+            'height': 'auto'
+        }).appendTo('#image-text-vis');
+        $img.resizable({
+            autoHide: true
+        });
+        $img.parent().draggable();
+        imageIndex++;
+    });
 });

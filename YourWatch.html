@@ -177,12 +177,12 @@
         <!-- Modal Content (The Image) -->
         <img class="modal-content" id="img01">
     </div>
-    <hr>
+
 
     <article id="platform" class="full-screen space vertical-box">
         <div id="platform-title" class="horizontal-box text-box space no-stretch">
             <h1 class="raleway">Playground</h1>
-            <p class="raleway">Mix and match different items to create the watch of your dreams.</p>
+            <h3 class="raleway">Mix and match different items to create the watch of your dreams.</h3>
         </div>
 
         <div id="creator" class="creator horizontal-box space auto-flex center-text no-overflow">
@@ -221,11 +221,14 @@
                 <div id="hands" class="selectable">
                     <h2 class="playfair">Hands</h3>
                 </div>
+                <div id="image" class="selectable">
+                    <h2 class="playfair">Decorations</h3>
+                </div>
                 <div id="text" class="selectable">
                     <h2 class="playfair">Text</h3>
                 </div>
-                <div id="image" class="selectable">
-                    <h2 class="playfair">Image</h3>
+                <div id="photos" class="selectable">
+                    <h2 class="playfair">Photos</h3>
                 </div>
             </div>
 
@@ -409,32 +412,6 @@
                     </div>
                 </div>
 
-                <div id="text-options" class="raleway hide vertical-box">
-                    <p class="no-stretch">Add a text of your choosing on your watch.</p>
-                    <input type="text" id="text-to-add" class="auto-flex" maxlength="20">
-                    <p class="no-stretch">Choose your font.</p>
-                    <div id="fonts" class="button-container horizontal-box no-stretch">
-                        <a id="raleway-font" class="raleway shiny-button">Raleway</a>
-                        <a id="playfair-font" class="playfair shiny-button">Playfair</a>
-                        <a id="cinzel-font" class="cinzel shiny-button">Cinzel</a>
-                        <a id="cookie-font" class="cookie shiny-button">Cookie</a>
-                        <a id="sancreek-font" class="sancreek shiny-button">Sancreek</a>
-                    </div>
-                    <div class="horizontal-box">
-                        <p class="no-stretch">Choose your font size.</p>
-                    <input type="number" id="font-size" class="auto-flex"> pt.
-                    <a id="font-size-button"><i class="fas fa-check"></i></a>
-                    </div>
-                    
-                    <div id="see-text" class="auto-flex">
-                        <h2></h2>
-                    </div>
-                    <div id="add-text-button" class="button-container">
-                        <a id="add-text" class="shiny-button">Add</a>
-                    </div>
-                    <p>Double click on text to remove it.</p>
-                </div>
-
                 <div id="image-options" class="raleway hide options">
                     <div id="pic-01" class="selectable">
                         <img src="img/customizer/pic/pic-01.jpg" alt="pic-01">
@@ -509,6 +486,42 @@
                         <p class="alt-text"></p>
                     </div>
                 </div>
+
+                <div id="text-options" class="raleway hide vertical-box fs16">
+                    <p class="no-stretch">Add a text of your choosing on your watch.</p>
+                    <input type="text" id="text-to-add" class="auto-flex" maxlength="20">
+                    <p class="no-stretch">Choose your font.</p>
+                    <div id="fonts" class="button-container horizontal-box no-stretch">
+                        <a id="raleway-font" class="raleway shiny-button">Raleway</a>
+                        <a id="playfair-font" class="playfair shiny-button">Playfair</a>
+                        <a id="cinzel-font" class="cinzel shiny-button">Cinzel</a>
+                        <a id="cookie-font" class="cookie shiny-button">Cookie</a>
+                        <a id="sancreek-font" class="sancreek shiny-button">Sancreek</a>
+                    </div>
+                    <div class="horizontal-box">
+                        <p class="no-stretch">Choose your font size.</p>
+                        <input type="number" id="font-size" class="auto-flex"> pt.
+                        <a id="font-size-button">
+                            <i class="fas fa-check"></i>
+                        </a>
+                    </div>
+
+                    <div id="see-text" class="auto-flex">
+                        <h2></h2>
+                    </div>
+                    <div id="add-text-button" class="button-container">
+                        <a id="add-text" class="shiny-button">Add</a>
+                    </div>
+                    <p>Double click on text to remove it.</p>
+                </div>
+
+                <div id="photo-options" class="raleway hide vertical-box fs16 va-center">
+                    <p class="no-stretch">Add a photo of your choosing to your watch by simply typing its URL here.</p>
+                    <input type="url" name="photo-url" id="photo-url">
+                    <a id="add-photo">
+                        <i class="fas fa-check"></i>
+                    </a>
+                </div>
             </div>
 
         </div>
@@ -517,7 +530,7 @@
                 I am ready!
             </a>
             <div id="enter-email" class="hide raleway center-text">
-                Please enter your email for further instructions about how to get your watch in no time flat!
+                Please enter your email for further instructions on how to get your watch in no time flat!
                 <input type="email" name="email" id="email">
                 <a id="submit" class="shiny-button">Submit</a>
             </div>
@@ -531,7 +544,21 @@
     </article>
 
     <footer>
-        
+        <div id="content-footer" class="horizontal-box">
+            <p>Powered by
+                <a href="http://www.telerikacademy.com/en">
+                    <img src="https://my.telerikacademy.com/Content/Images/Alpha/Hub/telerikacademy-logo.png" alt="telerikacademy-logo">
+                </a>
+            </p>
+            <div id="social-container">
+                <a href="https://github.com/biaedwards">
+                    <i class="fab fa-github-square"></i>
+                </a>
+                <a href="mailto:bibby.georgieva@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
     </footer>
 
 

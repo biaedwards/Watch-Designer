@@ -10,22 +10,6 @@ body {
     overflow-x: visible;
 }
 
-/* .jssorl-009-spin img {
-    animation-name: jssorl-009-spin;
-    animation-duration: 1.6s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-} */
-
 .no-stretch {
     flex: 0 0 auto;
 }
@@ -86,7 +70,8 @@ body {
     border-right: 1px solid #000;
 }
 
-a, a:hover{
+a,
+a:hover {
     text-decoration: none !important;
 }
 
@@ -157,7 +142,8 @@ nav a {
 
 .space {
     margin-top: 20px;
-    padding: 10px 30px 50px 30px;
+    margin-bottom: 20px;
+    padding: 10px 30px;
 }
 
 #inspo-scroller {
@@ -170,7 +156,7 @@ nav a {
 }
 
 .text-box {
-    margin: 0 7%;
+    margin: 1% 7%;
 }
 
 h1.raleway {
@@ -295,17 +281,19 @@ p.raleway {
 }
 
 #customizer-menu {
-    margin: 0 30px;    
+    margin: 0 30px;
+    background-color: black;
+    color: white;
 }
 
 #customizer-menu .selectable:hover {
     cursor: pointer;
-    background-color: #ecf0f1;
+    background-color: #2c2727;
 }
 
 #customizer-menu .selected {
-    background-color: #000000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
 }
 
 .modal span {
@@ -380,7 +368,7 @@ p.raleway {
     font-weight: 900;
 }
 
-.myShow{
+.myShow {
     display: inline-block;
 }
 
@@ -415,18 +403,13 @@ p.raleway {
     justify-content: center;
 }
 
-.dnd{
+.dnd {
     position: absolute;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
 }
-
-/* .dnd img{
-    position: absolute;
-    align-self: center;
-} */
 
 .vis-img img {
     height: 100%;
@@ -444,7 +427,18 @@ p.raleway {
     text-shadow: 0px -1px #333;
 }
 
-#text-options .shiny-button{
+#ready {
+    background-image: linear-gradient(#000, #161616);
+    color: white;
+}
+
+#ready:hover {
+    background-image: linear-gradient(#ecf0f1, #bdc3c7);
+    color: #000;
+    cursor: pointer;
+}
+
+#text-options .shiny-button {
     margin: 10px;
 }
 
@@ -458,51 +452,91 @@ p.raleway {
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
 }
 
-.shiny-button:hover{
-    background: linear-gradient(#34495e, #2c3e50);
+.shiny-button:hover {
+    background-image: linear-gradient(#000, #161616);
     color: #fff;
     cursor: pointer;
 }
 
-#save-design *{
+#save-design * {
     font-size: 16pt;
 }
 
-.cookie{
+.cookie {
     font-family: 'Cookie', cursive;
 }
 
-.sancreek{
+.sancreek {
     font-family: 'Sancreek', cursive;
 }
 
-.cinzel{
+.cinzel {
     font-family: 'Cinzel', serif;
 }
 
-.button-container *{
+.button-container * {
     font-size: 14pt;
     margin: auto 5px;
 }
 
-#add-text-button{
+#add-text-button {
     margin: 20px;
 }
 
-.dnd:hover{
+.dnd:hover {
     cursor: pointer;
 }
 
-#font-size i{
+#font-size i {
     font-size: 24pt;
     margin: 0 10px;
 }
 
-#text-options p{
+.fs16 p {
     font-size: 16pt;
 }
 
-#platform h1{
+#platform-title {
+    border-bottom: 3px solid black;
+}
+
+.va-center{
+    display: flex !important;
+    height: 100% !important;
+    justify-content: center !important;
+}
+
+#platform h1 {
     margin: 0 30;
 }
 
+#content-footer {
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+    align-content: center;
+}
+
+footer img {
+    height: 50px;
+    margin: 0 10px;
+}
+
+.fas,
+.fab {
+    padding: 10px;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.fas:hover,
+.fab:hover {
+    opacity: 0.7;
+}
+
+.fa-check{
+    color: #000;
+    font-size: 30px;
+}
