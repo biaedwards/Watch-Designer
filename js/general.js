@@ -106,7 +106,7 @@ jQuery(document).ready(function ($) {
         } else if (imgID.includes('hands')) {
             $('#hands-vis img').attr('src', imgPath);
         } else if (imgID.includes('pic')) {
-            $clicked.parent().siblings().find('p').html('');
+            $clicked.siblings().find('p').html('');
             $clicked.find('p').html('Double click to remove.');
             var $img = $('<img/>').attr({
                 'id': 'myImage' + imageIndex,
