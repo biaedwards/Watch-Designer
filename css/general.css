@@ -286,6 +286,10 @@ p.raleway {
     color: white;
 }
 
+#customizer-menu .selectable h2{
+    margin: 0;
+}
+
 #customizer-menu .selectable:hover {
     cursor: pointer;
     background-color: #2c2727;
